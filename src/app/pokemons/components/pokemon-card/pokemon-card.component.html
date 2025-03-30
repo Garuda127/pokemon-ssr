@@ -1,15 +1,7 @@
-<article
-  class="bg-blue-500 h-44 bg-opacity-25 rounded-lg shadow-md flex flex-col p-4 items-center justify-center cursor-pointer"
->
-  <img
-    [src]="pokemonImg()"
-    [alt]="pokemon().name"
-    [title]="pokemon().name"
-    class="w-24 h-24"
-    width="96"
-    height="96"
-  />
-  <div class="text-center mt-2">
-    <h2 class="text-xl font-bold capitalize text-white">{{ pokemon().name }}</h2>
+<article routerLink="/pokemon/{{ pokemon().name }}"
+  class="flex flex-col items-center justify-center p-4 bg-blue-500 bg-opacity-25 rounded-lg shadow-md cursor-pointer --animate-fadeInd h-44">
+  <img [src]="pokemonImg()" [alt]="pokemon().name" [title]="pokemon().name" class="w-24 h-24" width="96" height="96" />
+  <div class="mt-2 text-center">
+    <h2 class="text-xl font-bold text-white capitalize">{{ pokemon().name }}</h2>
   </div>
 </article>
