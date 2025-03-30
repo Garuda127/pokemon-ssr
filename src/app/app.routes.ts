@@ -23,6 +23,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'pokemons',
+    loadComponent: () =>
+      import('./pages/pokemons-page/pokemons-page.component').then(
+        (m) => m.PokemonsPageComponent
+      ),
+  },
+  {
     path: '**',
     redirectTo: '/about',
   },

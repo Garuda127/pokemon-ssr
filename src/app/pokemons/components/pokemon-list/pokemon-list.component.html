@@ -1,0 +1,10 @@
+<div class="grid gap-3 grid-cols-1 sm:grid-cols-3 md:grid-cols-5">
+  @for (item of pokemons(); track item.id) {
+  <pokemon-card [pokemon]="item"></pokemon-card>
+  }
+</div>
+<div
+  class="text-center col-span-5 border-white h-28 flex justify-center items-center"
+>
+  No existen Pokémons
+</div>
