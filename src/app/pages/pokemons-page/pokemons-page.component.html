@@ -10,6 +10,7 @@
 
 
 <div class="flex justify-between">
-  <button class="mt-2 btn btn-primary" (click)="loadPokemons(-1)">Anterior</button>
-  <button class="mt-2 btn btn-primary" (click)="loadPokemons(+1)">Siguiente</button>
+  <button class="mt-2 btn btn-primary" [routerLink]="['/pokemons/page/', currentPage()! - 1]"
+    [disabled]="currentPage() === 1">Anterior</button>
+  <button class="mt-2 btn btn-primary" [routerLink]="['/pokemons/page/', currentPage()! + 1]">Siguiente</button>
 </div>

@@ -23,14 +23,14 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'pokemons',
+    path: 'pokemons/page/:page',
     loadComponent: () =>
       import('./pages/pokemons-page/pokemons-page.component').then(
         (m) => m.PokemonsPageComponent
       ),
   },
   {
-    path: 'pokemon/:id',
+    path: 'pokemons/:id',
     loadComponent: () =>
       import('./pages/pokemon-page/pokemon-page.component').then(
         (m) => m.PokemonPageComponent
@@ -38,6 +38,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/pokemons',
+    redirectTo: '/about',
   },
 ];
