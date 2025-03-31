@@ -12,8 +12,8 @@
 </section>
 
 <section class="flex flex-col items-center justify-center w-full">
-  <img class="w-64 h-64" [src]="myPokemon.sprites.other?.['official-artwork']?.front_default" [alt]="pokemon()?.name"
-    [title]="myPokemon.name" width="256px" height="256px" />
+  <img class="w-64 h-64" ngSrc="{{myPokemon.sprites.other?.['official-artwork']?.front_default}}"
+    [alt]="pokemon()?.name" [title]="myPokemon.name" width="256" height="256" />
 </section>
 
 @if (myPokemon.cries.latest !== null) {

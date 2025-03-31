@@ -10,10 +10,11 @@ import { PokemonsService } from '../../pokemons/services/pokemons.service';
 import { ActivatedRoute } from '@angular/router';
 import { tap } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-pokemon-page',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './pokemon-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

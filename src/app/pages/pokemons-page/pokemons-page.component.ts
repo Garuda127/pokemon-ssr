@@ -1,17 +1,14 @@
 import {
-  ApplicationRef,
   ChangeDetectionStrategy,
   Component,
   effect,
   inject,
-  OnDestroy,
-  type OnInit,
   signal,
 } from '@angular/core';
 import { PokemonListComponent } from '../../pokemons/components/pokemon-list/pokemon-list.component';
 import { PokemonsService } from '../../pokemons/services/pokemons.service';
 import type { SimplePokemon } from '../../pokemons/interfaces/simple-pokemon.interface';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map, tap } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
